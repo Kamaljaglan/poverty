@@ -1,0 +1,307 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    width: 200px;
+    background-color: #333;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+    transition: width 0.3s;
+}
+.navbar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: bold; 
+    border-bottom: 1px solid #444; 
+    transition: background-color 0.3s;
+}
+.navbar a:hover {
+    background-color: #575757;
+    color: #ffcc00;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px; 
+    font-weight: bold;
+    border:none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #575757;
+    color: #ffcc00;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+    color: #ffcc00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.gallery{
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.gallery h2{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    padding: 20px;
+}
+.gallery img {
+    height: 300px;
+    width: 400px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.gallery img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.main {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+header {
+    background-color: #afacb0cf;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {
+    margin: 0;
+}
+.hero {
+    background-image: url('poverty.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h2 {
+    font-size: 2.5em;
+}
+.hero p {
+    font-size: 1.2em;
+}
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.section {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    background-color: white;
+}
+.section h3 {
+    margin-top: 0;
+}
+.about-section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+.team {
+    display: flex;
+    flex-wrap: wrap;
+}
+.team-member {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+.team-member p {
+    margin: 0;
+    color: #666;
+}
+.articles-section {
+    margin: 20px 0;
+}
+.article {
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 500px;
+    overflow: auto;
+}
+.article h2 {
+    margin-top: 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.contact-form {
+display: flex;
+flex-direction: column;
+max-width: 600px;
+margin: auto;
+padding: 20px;
+background-color: #f9f9f9;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+border-radius: 8px;
+}
+.contact-form label {
+margin: 10px 0 5px;
+font-weight: bold;
+}
+.contact-form input, .contact-form textarea {
+margin: 5px 0 15px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+border-color: #4CAF50;
+outline: none;
+}
+.donation-button {
+background-color: #4CAF50;
+color: white;
+padding: 15px;
+border: none;
+cursor: pointer;
+text-align: center;
+font-size: 16px;
+display: block;
+margin: 20px 0;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+.donation-button:hover {
+background-color: #45a049;
+}
+.form-feedback {
+margin-top: 20px;
+font-size: 16px;
+color: #4CAF50;
+text-align: center;
+}
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px 0;
+position: relative;
+width: 100%;
+bottom: 0;
+}
+
+
+.footer-content a {
+color: #ffcc00;
+text-decoration: none;
+margin: 0 10px;
+}
+
+.footer-content a:hover {
+text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+    }
+    .navbar a {
+        float: left;
+        padding: 8px;
+        margin-left: 15px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+    .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding: 14px 16px;
+    }
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+    .dropdown-content a {
+        text-align: left;
+        padding: 12px 16px;
+    }
+    .gallery img{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+    .main {
+        margin-left: 0;
+        margin-top: 70px;
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-content p {
+        margin: 0;
+    }
+
+}

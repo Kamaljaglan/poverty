@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal for Poverty Alleviation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            width: 200px;
+            background-color: #333;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+            transition: width 0.3s;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            font-weight: bold; 
+            border-bottom: 1px solid #444; 
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            color: #ffcc00;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px; 
+            font-weight: bold;
+            border:none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #575757;
+            color: #ffcc00;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+            color: #ffcc00;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main {
+            margin-left: 220px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .job {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .job h3 {
+            margin-top: 0;
+        }
+        .job p {
+            margin-top: 5px;
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px ;
+            position: relative;
+            bottom: 0;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        .footer a{
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 0;
+            }
+            .navbar a {
+                float: left;
+                padding: 8px;
+                margin-left: 15px;
+            }
+            .navbar a:last-child {
+                border-right: none;
+            }
+            .dropdown {
+                width: 100%;
+            }
+            .dropdown .dropbtn {
+                width: 100%;
+                text-align: left;
+                padding: 14px 16px;
+            }
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+            }
+            .dropdown-content a {
+                text-align: left;
+                padding: 12px 16px;
+            }
+            .main {
+                margin-left: 0;
+            }
+            .footer {
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="article.html">Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown">
+            <button class="dropbtn">Other links
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="resources.html">Resources</a>
+              <a href="job.html">Job</a>
+              <a href="donation.html">Donate</a>
+            </div>
+          </div> 
+    </div>
+
+     <div class="main">  
+    <div class="container">
+        <h2>Job Portal for Poverty Alleviation</h2>
+        
+        <div class="job">
+            <h3>Current Job Opportunities</h3>
+            <p>Explore job openings in organizations focused on poverty alleviation and related fields.</p>
+            <ul>
+                <li>
+                    <strong>Job Title:</strong> Program Coordinator<br>
+                    <strong>Organization:</strong> Global Poverty Project<br>
+                    <strong>Location:</strong> New York, NY<br>
+                    <strong>Apply:</strong> <a href="#">Apply Now</a>
+                </li>
+                <li>
+                    <strong>Job Title:</strong> Community Outreach Specialist<br>
+                    <strong>Organization:</strong> Poverty Action Coalition<br>
+                    <strong>Location:</strong> Los Angeles, CA<br>
+                    <strong>Apply:</strong> <a href="#">Apply Now</a>
+                </li>
+                <!-- Add more job listings here -->
+            </ul>
+        </div>
+        
+        <div class="job">
+            <h3>Resources for Job Seekers</h3>
+            <p>Find resources to help you in your job search and career development.</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a> - Professional networking and job search platform.</li>
+                <li><a href="https://www.indeed.com/" target="_blank">Indeed</a> - Job search engine.</li>
+                <li><a href="https://www.glassdoor.com/index.htm" target="_blank">Glassdoor</a> - Company reviews, salary information, and job postings.</li>
+                <!-- Add more job seeker resources here -->
+            </ul>
+        </div>
+        
+        <div class="job">
+            <h3>Organizations Fighting Poverty</h3>
+            <p>Learn about organizations actively working to alleviate poverty and their career opportunities.</p>
+            <ul>
+                <li><a href="https://www.care.org/" target="_blank">CARE</a> - Fighting global poverty and providing humanitarian aid.</li>
+                <li><a href="https://www.feedingamerica.org/" target="_blank">Feeding America</a> - Addressing hunger in the United States.</li>
+                <li><a href="https://www.habitat.org/" target="_blank">Habitat for Humanity</a> - Building homes and communities.</li>
+                <!-- Add more organizations here -->
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>Explore job opportunities and resources to contribute towards poverty alleviation efforts. Together, we can make a difference!</p>
+        <p>&copy; 2023 Poverty Awareness. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#" >Facebook</a> |
+            <a href="#" >Twitter</a> |
+            <a href="#" >Instagram</a> |
+            <a href="#" >Telegram</a> |
+        </p>
+    </div>
+</div>
+</body>
+</html>
