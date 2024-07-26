@@ -121,7 +121,7 @@ header h1 {
 }
 .gallery img {
     height: 300px;
-    width: 400px;
+    max-width: 400px;
     margin-left: 50px;
     margin-bottom: 30px;
 }
@@ -283,6 +283,15 @@ margin: 0 10px;
 .footer-content a:hover {
 text-decoration: underline;
 }
+
+@media screen and (max-width: 1160px){
+    .gallery img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+}
 @media screen and (max-width: 600px) {
     .navbar {
         width: 100%;
@@ -317,9 +326,11 @@ text-decoration: underline;
         margin-top: 70px;
     }
     .gallery img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         width: 95%;
         height: auto;
-        margin: 8px ;
         
     }
     .footer-content {
