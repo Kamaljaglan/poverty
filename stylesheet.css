@@ -100,6 +100,7 @@ header h1 {
     color: white;
     text-align: center;
     padding: 100px 20px;
+    border: 1px solid #ccc;
 }
 .hero h2 {
     font-size: 2.5em;
@@ -109,13 +110,15 @@ header h1 {
 }
 .gallery{
    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   border: 1px solid #ccc;
+   margin-top: 20px;
 }
-.gallery h2{
+.gallery h1{
     text-align: center;
-    margin-top: 20px;
-    font-size: 2em;
+    margin-top: 0;
     padding: 20px;
-    background-color: #afacb0cf;
+    text-decoration: underline;
+    font-size: 35px;
 }
 .gallery img {
     height: 300px;
@@ -136,13 +139,14 @@ header h1 {
     flex: 1;
     min-width: 200px;
     padding: 20px;
+    border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: 10px;
     background-color: white;
 }
 .section h3 {
     margin-top: 0;
-    background-color: #afacb0cf;
+    text-decoration: underline;
     text-align: center;
     padding: 10px;
 }
@@ -153,15 +157,16 @@ header h1 {
     padding: 20px;
     margin: 30px 0;
     background-color: #fff;
+    border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 500px;
+    height: 800px;
     overflow: auto;
 }
-.article h2 {
+.article h1 {
     margin-top: 0;
-    background-color: #afacb0cf;
     text-align: center;
     padding: 10px;
+    text-decoration: underline;
 }
 img{
     width: 100%;
@@ -171,13 +176,15 @@ img{
 .about-section {
     background-color: #fff;
     padding: 20px;
+    border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin: 20px 0;
 }
-.about-section h2{
+.about-section h1{
     text-align: center;
-    background-color: #afacb0cf;
+    text-decoration: underline;
     padding: 10px;
+    margin-top: 0;
 }
 .team {
     display: flex;
@@ -210,6 +217,7 @@ max-width: 600px;
 margin: auto;
 padding: 20px;
 background-color: #f9f9f9;
+border: 1px solid #ccc;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
 border-radius: 8px;
 }
