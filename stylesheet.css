@@ -100,7 +100,6 @@ header h1 {
     color: white;
     text-align: center;
     padding: 100px 20px;
-    border: 1px solid #ccc;
 }
 .hero h2 {
     font-size: 2.5em;
@@ -110,8 +109,8 @@ header h1 {
 }
 .gallery{
    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-   border: 1px solid #ccc;
    margin-top: 20px;
+   border: 1px solid #ccc;
 }
 .gallery h1{
     text-align: center;
@@ -219,7 +218,6 @@ padding: 20px;
 background-color: #f9f9f9;
 border: 1px solid #ccc;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
-border-radius: 8px;
 }
 .contact-form label {
 margin: 10px 0 5px;
@@ -319,9 +317,10 @@ text-decoration: underline;
         margin-top: 70px;
     }
     .gallery img{
-        width: 100%;
+        width: 95%;
         height: auto;
-        margin-left: 0;
+        margin: 8px ;
+        
     }
     .footer-content {
         flex-direction: row;
