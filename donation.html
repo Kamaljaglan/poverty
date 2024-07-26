@@ -97,9 +97,10 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h1 {
             text-align: center;
-            color: #333;
+            text-decoration: underline;
+            padding: 20px;
         }
         label {
             font-weight: bold;
@@ -131,6 +132,19 @@
         }
         button:hover {
             background-color: #45a049;
+        }
+        .form-feedback {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .form-feedback.success {
+            color: green;
+            font-size: 20px;
+        }
+        .form-feedback.error {
+            color: red;
         }
         .footer {
             background-color: #333;
@@ -211,9 +225,9 @@
     </div>
     <div class="main">
     <div class="container">
-        <h2>Donate to Alleviate Poverty</h2>
+        <h1>Donate to Alleviate Poverty</h1>
         <p>Your support can make a real difference in the lives of those affected by poverty. Thank you for your generosity!</p>
-        <form action="/submit_donation" method="post">
+        <form action="/submit_donation" id="donationForm" method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
 
@@ -231,18 +245,53 @@
 
             <button type="submit">Submit Donation</button>
         </form>
+        <div id="formFeedback" class="form-feedback"></div>
     </div>
     <div class="footer">
         <p>Together, we can make a difference!</p>
-        <p>&copy; 2023 Poverty Awareness. All rights reserved.</p>
+        <p>&copy; 2024 Poverty Awareness. All rights reserved.</p>
         <p>Follow us on:
-            <a href="#" >Facebook</a> |
-            <a href="#" >Twitter</a> |
-            <a href="#" >Instagram</a> |
-            <a href="#" >Telegram</a> |
+            <a href="https://www.facebook.com/" target="_blank" >Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.telegram.com" target="_blank" >Telegram</a> |
 
         </p>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('donationForm');
+    const formFeedback = document.getElementById('formFeedback');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Clear previous feedback
+        formFeedback.textContent = '';
+        formFeedback.classList.remove('success', 'error');
+
+        // Validate form inputs
+        const firstName = document.getElementById('fname').value.trim();
+        const lastName = document.getElementById('lname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const amount = document.getElementById('amount').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!firstName || !lastName || !email) {
+            formFeedback.textContent = 'Please fill in all required fields.';
+            formFeedback.classList.add('error');
+            return;
+        }
+
+        // Simulate form submission (e.g., via AJAX)
+        setTimeout(() => {
+            formFeedback.textContent = 'Thank you for your donation!';
+            formFeedback.classList.add('success');
+            form.reset(); // Reset the form
+        }, 1000);
+    });
+});
+</script>
 </body>
 </html>

@@ -25,20 +25,22 @@
           </div> 
     </div>
     <div class="main">
-     <!-- Contact Section -->
 <div class="content" id="contact" style="max-width: 800px;">
     <header>
         <h1>Contact Us</h1>
     </header>
     <form class="contact-form" id="contactForm" style="max-width: 800px;">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Your message to us.." rows="4"></textarea>
         
         <button type="submit" class="donation-button">Submit</button>
     </form>
@@ -47,18 +49,51 @@
     <div id="formFeedback" class="form-feedback"></div>
 </div>
 
-<footer>
+
+<footer style="margin-top: 20px;">
     <div class="footer-content">
-        <p>&copy; 2023 Poverty Awareness. All rights reserved.</p>
+        <p>&copy; 2024 Poverty Awareness. All rights reserved.</p>
         <p>Follow us on:
-            <a href="#" >Facebook</a> |
-            <a href="#" >Twitter</a> |
-            <a href="#" >Instagram</a> |
-            <a href="#" >Telegram</a> |
+            <a href="https://www.facebook.com/" target="_blank" >Facebook</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.telegram.com" target="_blank" >Telegram</a> |
         </p>
     </div>
 </footer>
 </div>
-<link rel="stylesheet" href="script.js">
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Clear previous feedback
+        formFeedback.textContent = '';
+        formFeedback.classList.remove('success', 'error');
+
+        // Validate form inputs
+        const firstName = document.getElementById('fname').value.trim();
+        const lastName = document.getElementById('lname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!firstName || !lastName || !email) {
+            formFeedback.textContent = 'Please fill in all required fields.';
+            formFeedback.classList.add('error');
+            return;
+        }
+
+        // Simulate form submission (e.g., via AJAX)
+        setTimeout(() => {
+            formFeedback.textContent = 'Thank you for contacting us!';
+            formFeedback.classList.add('success');
+            form.reset(); // Reset the form
+        }, 1000);
+    });
+});
+</script>
 </body>
 </html>
